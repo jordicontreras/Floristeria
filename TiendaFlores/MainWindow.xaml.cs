@@ -28,7 +28,22 @@ namespace TiendaFlores
         {
         InitializeComponent();
         }
-        private void Button_Click(object sender, RoutedEventArgs e)
+
+        
+        public static Dictionary<Guid, string> getTiendas()
+        {
+            var tiendas = DbContext.context.tiendas;  
+            
+            return tiendas;
+
+            
+
+
+            
+            
+        }
+
+        private void Tienda_Click(object sender, RoutedEventArgs e)
         {
                 var flores = new Floristeria
                 { 
@@ -37,7 +52,16 @@ namespace TiendaFlores
                 };
                 if (flores.Check1(flores.Name))
                 {
-                DbContext.context.tiendas.Add(flores.Id, flores.Name);
+                    DbContext.context.tiendas.Add(flores.Id, flores.Name);
+                    MessageBox.Show("Tienda añadida correctamente");
+                }
+                else 
+                { 
+                    MessageBox.Show("Ya existe una tienda con ese nommbre"); 
+                }
+        }
+        private void Stock_Click(object sender, RoutedEventArgs e)
+        {
                 var arboles = new Arbol
                 {
                     Id = Guid.NewGuid(),
@@ -64,21 +88,14 @@ namespace TiendaFlores
                 };
                 DbContext.context.decorations.Add(decoration.Id, decoration);
                 int TiendasCount = DbContext.context.tiendas.Count;
+                int suma = 0;
+                foreach (var i in DbContext.context.arbol.Values)
+                {
+                    suma = suma + i.Price;
+                }
                 NumTiendas.Content = TiendasCount;
-
-                int ArbolesCount = DbContext.context.arbol.Count;
-                NumArboles.Content = ArbolesCount;
-
-                int FloresCount = DbContext.context.flor.Count;
-                NumFlores.Content = FloresCount;
-
-                int DecorationsCount = DbContext.context.decorations.Count;
-                NumDecorations.Content = DecorationsCount;
-
-
-            }
-            else { MessageBox.Show("Ya existe una tienda con ese nommbre"); }           
-        }
+                TotalEuros.Content = suma;
+            }                
     }       
 }
 

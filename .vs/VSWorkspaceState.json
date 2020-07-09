@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\TiendaFlores"
+    "\\TiendaFlores",
+    "\\TiendaFlores\\DbContext"
   ],
-  "SelectedNode": "\\TiendaFlores\\MainWindow.xaml",
+  "SelectedNode": "\\TiendaFlores\\MainWindow.xaml.cs",
   "PreviewInSolutionExplorer": false
 }
