@@ -38,4 +38,3 @@ C:\Users\jordi\Downloads\Curso.Net-master\TiendaFlores\TiendaFlores\obj\Debug\Ti
 C:\Users\jordi\Downloads\Curso.Net-master\TiendaFlores\TiendaFlores\obj\Debug\TiendaFlores.csproj.CopyComplete
 C:\Users\jordi\Downloads\Curso.Net-master\TiendaFlores\TiendaFlores\obj\Debug\TiendaFlores.exe
 C:\Users\jordi\Downloads\Curso.Net-master\TiendaFlores\TiendaFlores\obj\Debug\TiendaFlores.pdb
-C:\Users\jordi\Downloads\Curso.Net-master\TiendaFlores\TiendaFlores\obj\Debug\GeneratedInternalTypeHelper.g.cs

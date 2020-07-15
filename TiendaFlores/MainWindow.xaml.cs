@@ -26,21 +26,15 @@ namespace TiendaFlores
     {       
         public MainWindow()
         {
-        InitializeComponent();
+            InitializeComponent();
         }
 
         
         public static Dictionary<Guid, string> getTiendas()
         {
             var tiendas = DbContext.context.tiendas;  
-            
-            return tiendas;
-
-            
-
-
-            
-            
+            //MessageBox(tiendas);
+            return tiendas;   
         }
 
         private void Tienda_Click(object sender, RoutedEventArgs e)
@@ -59,6 +53,7 @@ namespace TiendaFlores
                 { 
                     MessageBox.Show("Ya existe una tienda con ese nommbre"); 
                 }
+
         }
         private void Stock_Click(object sender, RoutedEventArgs e)
         {

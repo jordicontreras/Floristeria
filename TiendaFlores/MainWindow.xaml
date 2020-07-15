@@ -8,15 +8,12 @@
         Title="MainWindow" Height="518.666" Width="494">
 
         <Window.Resources>
-          <ObjectDataProvider x:Key="tiendas"
-
-                              ObjectType="{x:Type local:MainWindow}"
-
-                              MethodName="getTiendas"/>
+          <ObjectDataProvider x:Key="tiendas" MethodName="getTiendas"/>
         </Window.Resources>
-    <Grid HorizontalAlignment="Left" Width="502" Margin="0,-55,-11,33">
 
-        
+  
+  
+    <Grid HorizontalAlignment="Left" Width="502" Margin="0,-55,-11,33">
 
         <Label Content="FLORISTERIA CYBERNARIUM" HorizontalAlignment="Left" VerticalAlignment="Top" Width="492" Background="#FF34DE79" Margin="0,55,0,0"/>
 
@@ -50,7 +47,15 @@
         <Label Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Background="#FF34DE79" Margin="17,450,0,0"/>
         <Label Content="Total Euros" HorizontalAlignment="Left" Margin="26,452,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.237,0.038"/>
 
-          <ComboBox Margin="34,190,0,0" Name="ComboBox1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="194" Height="25" ItemsSource="{Binding Source={StaticResource tiendas}}"/>
+      
+
+      <ComboBox ItemsSource="{Binding Source={StaticResource tiendas}}"
+
+                      SelectedValuePath="Key"
+
+                      DisplayMemberPath="Value"
+
+                      SelectedValue="{Binding Path=Choise,Mode=TwoWay}"/>
 
     </Grid>
 </Window>
